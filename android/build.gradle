@@ -79,8 +79,12 @@ android {
 }
 
 repositories {
-  mavenCentral()
   google()
+  mavenCentral()
+  jcenter()
+  maven {
+      url "$rootDir/../node_modules/react-native/android"
+  }
 }
 
 
@@ -88,7 +92,11 @@ dependencies {
   // For < 0.71, this will be from the local maven repo
   // For > 0.71, this will be replaced by `com.facebook.react:react-android:$version` by react gradle plugin
   //noinspection GradleDynamicVersion
-  implementation "com.facebook.react:react-native:+"
+  implementation "com.facebook.react:react-native:+"  // React Native core dependency
+  implementation 'androidx.annotation:annotation:1.1.0'  // AndroidX annotation library
+
+
+
 }
 
 if (isNewArchitectureEnabled()) {
