@@ -5,10 +5,11 @@ import androidx.annotation.NonNull;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
+import com.facebook.react.shell.MainReactPackage;
 import com.facebook.react.uimanager.ViewManager;
 
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Arrays;
 import java.util.List;
 
 public class SimpleGradientTextPackage implements ReactPackage {
@@ -16,13 +17,15 @@ public class SimpleGradientTextPackage implements ReactPackage {
   @Override
   public List<NativeModule> createNativeModules(@NonNull ReactApplicationContext reactContext) {
     List<NativeModule> modules = new ArrayList<>();
-    modules.add(new SimpleGradientTextModule(reactContext));
     return modules;
   }
 
-  @NonNull
+
   @Override
-  public List<ViewManager> createViewManagers(@NonNull ReactApplicationContext reactContext) {
-    return Collections.emptyList();
+  public List<ViewManager> createViewManagers(
+    ReactApplicationContext reactContext) {
+    return Arrays.<ViewManager>asList(
+      new SimpleGradientTextViewManager(reactContext)
+    );
   }
 }
