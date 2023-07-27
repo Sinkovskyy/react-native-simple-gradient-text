@@ -37,7 +37,8 @@ public class SimpleGradientTextViewManager extends SimpleViewManager<SimpleGradi
   // Method to set the text
   @ReactProp(name = "text")
   public void setText(SimpleGradientTextView view, String text) {
-    view.textChanged(text);
+    view.setText(text);
+    view.updateGradient();
   }
 
   // Method to set the text

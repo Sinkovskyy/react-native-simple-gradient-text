@@ -72,14 +72,15 @@ public class SimpleGradientTextView extends AppCompatTextView {
     colors = newColors;
   }
 
-
-  public void textChanged(String text) {
-    setText(text);
+  @Override
+  public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+    // Get the text from the TextView
+    String text = getText().toString();
     // Count the number of letters in the text
     int letterCount = countLetters(text);
-
     totalLetters = letterCount;
   }
+
 
 
   // Optimize positions

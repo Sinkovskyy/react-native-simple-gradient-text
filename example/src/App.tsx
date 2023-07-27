@@ -7,8 +7,8 @@ export default function App() {
   return (
     <View style={styles.container}>
       <SimpleGradientText
-        text={'Hello world'}
-        colors={['#fff000', '#fff000', '#000fff', '#000fff']}
+        text={'Hello worl'}
+        colors={['#fff000', '#0000ff', '#ff12ff', '#1ff011']}
         positions={[0, 0.5, 0.55, 1]}
       />
       <Text />
