@@ -17,12 +17,11 @@ import { SimpleGradientText } from 'react-native-simple-gradient-text';
 
 // ...
 
-<SimpleGradientText
-  text={'Hello, Gradient Text!'}
-  colors={['#FF5733', '#32a852', '#2375ff']}
-  positions={[0, 0.5, 1]}
-  style={styles.text}
-/>
+  <SimpleGradientText
+    text={'Simple gradient text'}
+    colors={['#fff000', '#0000ff', '#ff12ff', '#1ff011']}
+    positions={[0, 0.5, 0.55, 1]}
+  />
 
 ```
 
